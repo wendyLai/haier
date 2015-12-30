@@ -1,0 +1,1 @@
+/home/lwr/ember-work/borrowers/bower_components/ember-cli-test-loader/test-loader.js

@@ -1,0 +1,1 @@
+/home/lwr/ember-work/borrowers/app/components/ip-input.js

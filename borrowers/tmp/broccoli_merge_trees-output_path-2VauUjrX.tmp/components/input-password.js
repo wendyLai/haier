@@ -1,0 +1,1 @@
+/home/lwr/ember-work/borrowers/app/components/input-password.js

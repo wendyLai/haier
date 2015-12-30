@@ -1,0 +1,1 @@
+/home/lwr/ember-work/borrowers/tmp/concat_with_maps-output_path-8KfnG6YH.tmp/assets/borrowers.js

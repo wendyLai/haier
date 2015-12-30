@@ -1,0 +1,9 @@
+define('borrowers/tests/unit/controllers/funcs/func/kind1-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/controllers/funcs/func');
+  QUnit.test('unit/controllers/funcs/func/kind1-test.js should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/funcs/func/kind1-test.js should pass jshint.');
+  });
+});

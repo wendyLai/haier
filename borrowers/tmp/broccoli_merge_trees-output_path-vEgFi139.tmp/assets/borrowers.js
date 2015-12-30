@@ -1,0 +1,1 @@
+/home/lwr/ember-work/borrowers/tmp/broccoli_merge_trees-input_base_path-FRxBtJT1.tmp/1/assets/borrowers.js
