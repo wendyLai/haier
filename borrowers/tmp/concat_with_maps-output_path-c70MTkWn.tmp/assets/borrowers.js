@@ -528,7 +528,13 @@ define('borrowers/routes/application', ['exports', 'ember'], function (exports, 
 	});
 });
 define('borrowers/routes/login', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Route.extend({});
+	exports['default'] = _ember['default'].Route.extend({
+		actions: {
+			didTransition: function didTransition() {
+				document.title = '登录-海尔路由器管理系统';
+			}
+		}
+	});
 });
 define('borrowers/routes/main/funcs/func/kind1', ['exports', 'ember'], function (exports, _ember) {
 	exports['default'] = _ember['default'].Route.extend({
@@ -1188,6 +1194,11 @@ define('borrowers/routes/main', ['exports', 'ember'], function (exports, _ember)
 	exports['default'] = _ember['default'].Route.extend({
 		afterModel: function afterModel() {
 			this.transitionTo('main.funcs');
+		},
+		actions: {
+			didTransition: function didTransition() {
+				document.title = '主界面-海尔路由器管理系统';
+			}
 		}
 	});
 });
