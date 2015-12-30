@@ -5,10 +5,10 @@ export default Ember.Component.extend({
 	actions: {
 		listToggle:function (){
 			var this_id=this.get('elementId');
-			//console.log( this_id );
+			console.log( this_id );
 
 			var this_icon=Ember.$("#"+this_id+"").find(".chevron");
-			var this_content=Ember.$("#"+this_id+"").parent().siblings(".ivy-tab-panel");
+			var this_content=Ember.$("#"+this_id+"").parent().siblings(".ivy-tab-panel.active");
 			
 			if( !Ember.$("#"+this_id+"").hasClass("disabled") ){
 				if( this_icon.hasClass("down") ){

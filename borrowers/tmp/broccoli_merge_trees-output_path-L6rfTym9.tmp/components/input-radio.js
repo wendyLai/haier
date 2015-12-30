@@ -1,0 +1,1 @@
+/home/lwr/haier/borrowers/app/components/input-radio.js
