@@ -1,0 +1,63 @@
+<div id="kind9_t">
+	<div class="ui list clearfix settingdetail">
+
+		<div class="item">
+			<div>网关地址：</div>
+			<div class="itemright">
+				{{input-ip value1="192" value2="168" value3="68" value4="2"}}
+			</div>
+		</div>
+
+		<div class="item">
+			<div>子网掩码：</div>
+			<div class="itemright">
+				{{input-ip isread=true value1="255" value2="255" value3="255" value4="0"}}
+			</div>
+		</div>
+
+		<div class="item">
+			<div>IP地址开始段：</div>
+			<div class="itemright">
+				<div class="ui input">
+					<label class="textinput">192.168.68.</label>
+					<input type="text" class="miniinput" value="10">
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div>IP地址结束段：</div>
+			<div class="itemright">
+				<div class="ui input">
+					<label class="textinput">192.168.68.</label>
+					<input type="text" class="miniinput" value="254">
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div>DHCP服务器：</div>
+			<div class="itemright">
+				{{input-toggle}}
+			</div>
+		</div>
+
+		<div class="centerbtn">
+			<div class="ui button bgblue">
+				保存设置
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<script>
+  
+  $(function(){
+  
+    var main_height=$("#main").outerHeight();
+    $("#nav").css("height",main_height);
+  
+  })
+
+</script>

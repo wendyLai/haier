@@ -1,0 +1,44 @@
+<div id="kind6_t" class="ui list">
+
+	{{#each model.deviceinfo as |device|}}
+
+		<div class="item clearfix devicedetail">
+
+			<div class="fl">
+				{{#if device.kindiscomputer}}
+					<i class="icon desktop myblue"></i>
+				{{else if device.kindismobile}}
+					<i class="icon mobile myblue"></i>
+				{{else if device.kindisknow}}
+					<i class="icon help circle myblue"></i>
+				{{/if}}
+			</div>
+
+			<div class="fl">
+				<div class="ui list">
+					<div class="item"><label>设备名称</label>：<label>{{device.devicename}}</label></div>
+					<div class="item"><label>MAC地址</label>：<label>{{device.MAC}}</label></div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="blacklistbtn centerbtn">
+			<div class="ui button bgblue">
+				移除黑名单
+			</div>
+		</div>
+
+	{{/each}}
+</div>
+
+<script>
+  
+  $(function(){
+  
+    var main_height=$("#main").outerHeight();
+    $("#nav").css("height",main_height);
+  
+  })
+
+</script>

@@ -1,0 +1,14 @@
+<div class="ui input ip_input">
+	<input type="text" maxlength="3" tabindex="1" onKeypress={{action "valid_value"}} onKeyup={{action "update_value" "1"}} value={{value1}} readOnly={{isread}}>
+	<span>.</span>
+	<input type="text" maxlength="3" tabindex="1" onKeypress={{action "valid_value"}} onKeyup={{action "update_value" "2"}} value={{value2}} readOnly={{isread}}>
+	<span>.</span>
+	<input type="text" maxlength="3" tabindex="1" onKeypress={{action "valid_value"}} onKeyup={{action "update_value" "3"}} value={{value3}} readOnly={{isread}}>
+	<span>.</span>
+	<input type="text" maxlength="3" tabindex="1" onKeypress={{action "valid_value"}} onKeyup={{action "update_value" "4"}} value={{value4}} readOnly={{isread}}> 
+</div>
+{{#if isneedbtn}}
+	<button class="ui button transparent ip_btn">
+		<i class="delete icon myred" {{action "clear_ip"}}></i>
+	</button>
+{{/if}}

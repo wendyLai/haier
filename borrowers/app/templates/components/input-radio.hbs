@@ -1,0 +1,17 @@
+{{#if isdefault}}
+	<div class="radio_input clearfix" {{action "radio_toggle"}}>
+		<div class="radio_box fl cur">
+			<span class="radio_span fl"></span>
+			<input type="radio" name={{name}}>
+			</div>
+		<label class="fl">{{label}}</label>
+	</div>
+{{else}}
+	<div class="radio_input clearfix" {{action "radio_toggle"}}>
+		<div class="radio_box fl">
+			<span class="radio_span fl"></span>
+			<input type="radio" name={{name}}>
+		</div>
+		<label class="fl">{{label}}</label>
+	</div>
+{{/if}}

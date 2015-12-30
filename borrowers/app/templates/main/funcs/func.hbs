@@ -1,0 +1,22 @@
+{{#each model.rows as |row|}}
+	{{#ivy-tabs}}
+
+		{{#ivy-tab-list}}
+			{{#each row.kinds as |kind|}}
+			    {{#ivy-tab}}
+			    	<span class="kindicon" style="background-position-y:{{kind.icon_y}}"></span>
+			    	{{link-to kind.name "main.funcs.func.kindall" model.func_slug row.row_slug kind.kind_slug }}
+				{{/ivy-tab}}
+			{{/each}}
+			{{page-toggle class="icon_list"}}
+			{{page-refresh class="icon_list"}}
+		{{/ivy-tab-list}}
+
+		{{#each row.kinds as |kind|}}
+			{{#ivy-tab-panel}}
+				{{outlet kind.id}}
+			{{/ivy-tab-panel}}
+		{{/each}}
+
+	{{/ivy-tabs}}
+{{/each}}

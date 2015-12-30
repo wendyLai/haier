@@ -1,0 +1,32 @@
+<header id="header">
+
+	<h1>
+		<a href="http://192.168.74.129:4200/main/funcs"><img src="assets/logo.png" alt=""></a>
+	</h1>
+
+	<section class="fr">
+		<a href=http://www.haier.com/cn/ class="my-item myblue">官网</a>
+		<a href=http://bbs.haier.com/forum/zhzz/ class="my-item myblue">论坛</a>
+		<a href="http://192.168.74.129:4200" id="logout" class="my-item myblue">退出</a>
+	</section>
+	
+</header>
+
+<div id="content" style="overflow:hidden;">
+	{{outlet}}
+</div>
+
+<footer id="footer" class="ui footer">海尔集团版权所有（copyright &copy;   2015 Haier.All Right Reserved）</footer>
+
+
+<script>
+  
+    $(function(){
+
+		$("body").css("background","#48c0d8");
+
+        var main_height=$("#main").outerHeight();
+        $("#nav").css("height",main_height);
+    })
+
+</script>

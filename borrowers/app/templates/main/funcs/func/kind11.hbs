@@ -1,0 +1,314 @@
+<div id="kind11_t">
+	<div class="ui list clearfix settingdetail">
+
+		<div class="item">
+			<div>2.4G：</div>
+			<div class="itemright">
+				{{input-toggle}}
+			</div>
+		</div>
+
+		<div class="ui divider"></div>
+
+		<div class="item">
+			<div>无线名称：</div>
+			<div class="itemright">
+				<div class="ui input">
+					<input type="text" placeholder="">
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div>是否广播SSID：</div>
+			<div class="itemright">
+				{{input-toggle}}
+			</div>
+		</div>
+
+		<div class="item">
+			<div>加密方式：</div>
+			<div class="itemright">  
+				{{#ui-dropdown class="selection" onChange=(action 'update_selected')}}
+					<div class="default text">请选择</div>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						{{#each itemActions_1 as |actionname|}}
+							<div class="item" data-id="{{actionname}}">
+								{{actionname}}
+							</div>
+						{{/each}}
+					</div>
+				{{/ui-dropdown}}
+			</div>
+		</div>
+
+		<div class="item">
+			<div>传输功率：</div>
+			<div class="itemright">  
+				{{#ui-dropdown class="selection" onChange=(action 'update_selected')}}
+					<div class="default text">请选择</div>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						{{#each itemActions_2 as |actionname|}}
+							<div class="item" data-id="{{actionname}}">
+								{{actionname}}
+							</div>
+						{{/each}}
+					</div>
+				{{/ui-dropdown}}
+			</div>
+		</div>
+
+		<div class="item itemmessage">
+			<div>&nbsp;</div>
+			<div class="itemright"> 
+				<p>如非必要，请勿改动下列设置</p>
+			</div>
+		</div>
+
+		<div class="item">
+			<div>网络模式：</div>
+			<div class="itemright">  
+				{{#ui-dropdown class="selection" onChange=(action 'update_selected')}}
+					<div class="default text">请选择</div>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						{{#each itemActions_3 as |actionname|}}
+							<div class="item" data-id="{{actionname}}">
+								{{actionname}}
+							</div>
+						{{/each}}
+					</div>
+				{{/ui-dropdown}}
+			</div>
+		</div>
+
+		<div class="item">
+			<div>信道：</div>
+			<div class="itemright">  
+				{{#ui-dropdown class="selection" onChange=(action 'update_selected')}}
+					<div class="default text">请选择</div>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						{{#each itemActions_4 as |actionname|}}
+							<div class="item" data-id="{{actionname}}">
+								{{actionname}}
+							</div>
+						{{/each}}
+					</div>
+				{{/ui-dropdown}}
+			</div>
+		</div>
+
+		<div class="item">
+			<div>频道带宽：</div>
+			<div class="itemright">  
+				{{#ui-dropdown class="selection" onChange=(action 'update_selected')}}
+					<div class="default text">请选择</div>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						{{#each itemActions_5 as |actionname|}}
+							<div class="item" data-id="{{actionname}}">
+								{{actionname}}
+							</div>
+						{{/each}}
+					</div>
+				{{/ui-dropdown}}
+				<div class="ui left pointing basic label droplabel">
+			    	会根据当前无线网络环境自动选择20M,40M或80M频宽
+			    </div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div>beacon时槽：</div>
+			<form class="itemright">
+				<div class="field uninput">
+					<input type="text" class="fl smallinput" placeholder="100">
+					<label class="itemlabel">&nbsp;ms(范围：20-1024)</label>
+				</div>
+			</form>
+		</div>
+
+		<div class="ui divider"></div>
+
+		<div class="item">
+			<div>5G：</div>
+			<div class="itemright">
+				{{input-toggle}}
+			</div>
+		</div>
+
+		<div class="item">
+			<div>&nbsp;</div>
+			<div class="itemright">
+				{{ui-checkbox label="应用与2.4G相同的设置" class="uninput"}}
+			</div>
+		</div>
+
+		<div class="ui divider"></div>
+
+		<div class="item">
+			<div>无线名称：</div>
+			<div class="itemright">
+				<div class="ui input">
+					<input type="text" placeholder="">
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div>是否广播：</div>
+			<div class="itemright">
+				{{input-toggle}}
+			</div>
+		</div>
+
+		<div class="item">
+			<div>加密方式：</div>
+			<div class="itemright">  
+				{{#ui-dropdown class="selection" onChange=(action 'update_selected')}}
+					<div class="default text">请选择</div>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						{{#each itemActions_1 as |actionname|}}
+							<div class="item" data-id="{{actionname}}">
+								{{actionname}}
+							</div>
+						{{/each}}
+					</div>
+				{{/ui-dropdown}}
+			</div>
+		</div>
+
+		<div class="item">
+			<div>加密算法：</div>
+			<div class="itemright">  
+				{{#ui-dropdown class="selection" onChange=(action 'update_selected')}}
+					<div class="default text">请选择</div>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						{{#each itemActions_7 as |actionname|}}
+							<div class="item" data-id="{{actionname}}">
+								{{actionname}}
+							</div>
+						{{/each}}
+					</div>
+				{{/ui-dropdown}}
+			</div>
+		</div>
+
+		<div class="item">
+			<div>密码：</div>
+			<div class="itemright passwordinput">
+				{{input-password}}
+			</div>
+		</div>
+
+		<div class="item">
+			<div>传输功率：</div>
+			<div class="itemright">  
+				{{#ui-dropdown class="selection" onChange=(action 'update_selected')}}
+					<div class="default text">请选择</div>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						{{#each itemActions_2 as |actionname|}}
+							<div class="item" data-id="{{actionname}}">
+								{{actionname}}
+							</div>
+						{{/each}}
+					</div>
+				{{/ui-dropdown}}
+			</div>
+		</div>
+
+		<div class="item itemmessage">
+			<div>&nbsp;</div>
+			<div class="itemright"> 
+				<p>如非必要，请勿改动下列设置</p>
+			</div>
+		</div>
+
+		<div class="item">
+			<div>网络模式：</div>
+			<div class="itemright">  
+				{{#ui-dropdown class="selection" onChange=(action 'update_selected')}}
+					<div class="default text">请选择</div>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						{{#each itemActions_9 as |actionname|}}
+							<div class="item" data-id="{{actionname}}">
+								{{actionname}}
+							</div>
+						{{/each}}
+					</div>
+				{{/ui-dropdown}}
+			</div>
+		</div>
+
+		<div class="item">
+			<div>信道：</div>
+			<div class="itemright">  
+				{{#ui-dropdown class="selection" onChange=(action 'update_selected')}}
+					<div class="default text">请选择</div>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						{{#each itemActions_4 as |actionname|}}
+							<div class="item" data-id="{{actionname}}">
+								{{actionname}}
+							</div>
+						{{/each}}
+					</div>
+				{{/ui-dropdown}}
+			</div>
+		</div>
+
+		<div class="item">
+			<div>频道带宽：</div>
+			<div class="itemright">  
+				{{#ui-dropdown class="selection" onChange=(action 'update_selected')}}
+					<div class="default text">请选择</div>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						{{#each itemActions_5 as |actionname|}}
+							<div class="item" data-id="{{actionname}}">
+								{{actionname}}
+							</div>
+						{{/each}}
+					</div>
+				{{/ui-dropdown}}
+				<div class="ui left pointing basic label droplabel">
+			    	会根据当前无线网络环境自动选择20M,40M或80M频宽
+			    </div>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>beacon时槽：</div>
+			<form class="itemright">
+				<div class="field uninput">
+					<input type="text" class="fl smallinput" placeholder="100">
+					<label class="itemlabel">&nbsp;ms(范围：20-1024)</label>
+				</div>
+			</form>
+		</div>
+
+		<div class="centerbtn">
+			<div class="ui button bgblue">
+				保存设置
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+  
+  $(function(){
+  
+    var main_height=$("#main").outerHeight();
+    $("#nav").css("height",main_height);
+  
+  })
+
+</script>

@@ -1,0 +1,13 @@
+<label>{{label}}</label>：
+<input type="text" class="edit_input transparent" readOnly=true value={{defaultvalue}}>
+<div class="icon_list">
+	{{#if showEdit}}
+		<i class="icon write myblue" {{action "do_edit"}}></i>
+	{{/if}}
+	{{#if showSave}}
+		<i class="icon checkmark myred" {{action "do_save"}}></i>
+		<i class="icon remove" {{action "do_cancle"}}></i>
+	{{/if}}
+</div>
+
+

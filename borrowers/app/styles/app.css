@@ -1,0 +1,674 @@
+/* ----------------------------reset---------------------------- */
+
+body{
+	font-size: 14px;
+	overflow-x: scroll;
+	font-family: microsoft yahei;
+}
+
+body>*{
+	width:100%;
+	height:100%;	
+}
+
+div,h1,h2,h3,h4,h5,h6{
+	margin:0;
+	padding:0;
+}
+
+a,a:hover{
+	outline: 0;
+	border:none;
+	color: inherit;
+	box-shadow: none;
+	text-decoration: none;
+}
+
+label{
+	cursor: default;
+}
+
+.myblue{
+	color: rgb(0,200,224);
+}
+
+.bgblue{
+	color: #fff!important;
+	background: rgb(0,200,224)!important;
+}
+
+.myred{
+	color: rgb(225,1,79);
+}
+
+.bgred{
+	color: #fff!important;
+	background: rgb(225,1,79)!important;
+}
+
+.mygrey{
+	color: rgb(94,94,94);
+}
+
+.transparent{
+	background: transparent!important;
+}
+
+.clearfix:before,.clearfix:after{ 
+    content:""; 
+    display:table; 
+} 
+
+.clearfix:after{clear:both;} 
+
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/
+}
+
+.fl{
+	float:left;
+}
+
+.fr{
+	float:right;
+}
+
+i.desktop{
+	font-size: 40px;
+}
+
+i.mobile{
+	font-size: 60px;
+}
+
+i.help.circle{
+	font-size: 40px;
+}
+
+.center{
+	text-align: center;
+}
+
+.button{
+	font-family: microsoft yahei;
+	font-weight: lighter!important;
+}
+
+.ui.label{
+	font-weight: normal;
+}
+
+.centerbtn{
+	width: 100%;
+	margin:20px 0;
+	text-align: center;
+}
+
+.bgblue.button:hover{
+	background: #03acc0!important;
+}
+
+#content .dropdown.icon{
+	color: rgb(0,200,224);
+}
+
+#content .icon_list i{
+	cursor: pointer;
+}
+
+#content .ui.list{
+	margin:0;
+}
+
+/* ---------------------------------public---------------------------- */
+#header{
+	height:60px;
+	width: 960px;
+	padding:0 25px;
+	overflow: hidden;
+	line-height:60px;
+	margin:20px auto 0;
+	background: #303030;
+	border-radius: 10px 10px 0 0;
+}
+
+#header h1{
+	float: left;
+}
+
+#header h1 a{
+	margin-top: 15px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+#header section a{
+	margin-left: 15px;
+}
+
+#header section a:hover{
+	color: rgb(0,200,224);
+	text-decoration: underline;
+}
+
+#content{
+	z-index: 1;
+	width:960px;
+	margin:0 auto;
+	color: #5e5e5e;
+	background:#fff;
+	overflow: hidden;
+	border-radius:0 0 10px 10px;
+}
+
+/* ---------------------------------edit组件---------------------------- */
+
+.edit_input{
+	padding: 0;
+	width: 12em;
+}
+
+.edit_input.transparent{
+	background: transparent;	
+	border-color: transparent;
+}
+
+/* ---------------------------------icon-wifi组件---------------------------- */
+.wifitype{
+	font-size: 10px;
+	margin-left: -0.5em;
+}
+
+/* ---------------------------------input-password组件---------------------------- */
+.passwordinput .button{
+	margin-left: -3.6em;
+}
+
+
+/* ---------------------------------login页面---------------------------- */
+#loginbox{
+	top:50%;
+	left: 50%;
+	width: 500px;
+	padding:40px 20px;
+	height: 270px;
+	position: fixed;
+	margin-top:-160px;
+	margin-left:-250px;
+	text-align: center;
+}
+
+#loginfooter{
+	left:50%;
+	color:#fff;
+	width:500px;
+	bottom:40px;
+	position: fixed;
+	margin-left:-250px;
+	text-align: center;
+}
+
+#loginfooter a{
+	text-decoration: underline;
+}
+
+#loginfooter a:hover{
+	color:#5e5e5e;
+	text-decoration: underline;
+}
+
+/* ---------------------------------导航---------------------------- */
+#content #nav{
+	margin:0;
+	width: 20%;
+	height:100%;
+	float: left;
+	border:none;
+	padding:10px 0;
+	border-radius: 0;
+	box-shadow: none;
+	min-height: 820px;
+	border-right: 1px solid #aaa;
+	background: rgb(226, 226, 226);
+}
+
+#content #nav .item{
+	width: 100%;
+	height: 100px;
+	padding:10px 0;
+	text-align: center;
+}
+
+#content #nav .item p{
+	color:#5e5e5e;
+	font-size: 1rem;
+	font-family: microsoft yahei;
+}
+
+#content #nav .navimg{
+	width: 57px;
+	height:57px;
+	display: inline-block;
+	background-repeat:no-repeat;
+	background-image:url(nav.png);
+	background-position-x:0px;
+}
+
+#content #nav .active .item,#content #nav .current .item{
+	background: #fff;
+	margin-left: 2px;
+	width: calc( 100% - 1px );
+	border-left: 2px solid #00c8e0;
+}
+
+#content #nav .active .item .navimg,#content #nav .current .item .navimg{
+	background-position-x:-57px;
+}
+
+/* ---------------------------------主体部分框架---------------------------- */
+#content #main{
+	margin:0;
+	width: 80%;
+	float: left;
+	padding-top: 20px;
+}
+
+#content #main .ivy-tabs{
+	padding:0;
+	width:100%;
+}
+
+#content #main .ivy-tabs .ivy-tab-list{
+	margin:0;
+	height: 45px;
+	overflow:hidden;
+	background: #f4f0f0;
+	padding:0 20px 0 40px;
+}
+#content #main .ivy-tabs .ivy-tab-panel{
+	padding:20px;
+}
+
+#content #main .ivy-tabs li{
+	line-height: 45px;
+	padding-right: 20px;
+	display: inline-block;
+}
+
+#content #main .ivy-tabs li>*{
+	float: left;
+}
+
+/* #content #main .ivy-tabs li.active{
+	color: rgb(0,200,224);
+}
+
+#content #main .ivy-tabs li.disabled{
+	color:#999;
+} */
+
+#content #main .ivy-tabs li .kindicon{
+	width: 24px;
+	height: 24px;
+	margin-top: 10px;
+	margin-right: 8px;
+	background-position-x:0px;
+	background-repeat:no-repeat;
+	background-image:url(kindicon.png);
+}
+
+#content #main .ivy-tabs li:last-child{
+	float:right;
+}
+
+#content #main .ivy-tabs .icon_list{
+	float: right;
+	padding:0 5px;
+}
+
+/* ---------------------------------设备显示页---------------------------- */
+#content .devicedetail{
+	min-height: 70px;
+}
+
+#content .devicedetail .fl>i{
+	width: 80px;
+	line-height: 80px;
+	display: inline-block;
+}
+
+#content .devicedetail .ui.list .item{
+	height: 2em;
+	line-height: 2em;
+}
+
+#content .devicedetail .ui.list .item label:first-child{
+	width: 5em;
+	text-align: left;
+	display: inline-block;
+}
+
+#content .item.devicedetail .fr>.ui.button{
+	display: block;
+	margin:5px 100px;
+}
+
+/* ---------------------------------列表显示页---------------------------- */
+
+#content .settingdetail>.item{
+	padding: 0;
+	height: 4em;
+	line-height: 4em;
+}
+
+#content .settingdetail .item.itemmessage{
+	height: 2em;
+	line-height: 2em;
+}
+
+#content .settingdetail>.item>*{	
+	float: left;
+}
+
+#content .settingdetail .item>div:first-child{
+	width:13em; 
+	text-align: right;
+}
+
+#content .settingdetail .item .itemright{
+	height: 4em;
+	padding-left: 10px;
+	width: calc( 100% - 13em );
+}
+
+#content .settingdetail .item.itemmessage .itemright{
+	height: 2em;
+	line-height: 2em;
+}
+
+#content .settingdetail .item .itemright>*{
+	float: left;
+}
+
+#content .settingdetail .item .itemright .ui.input{
+	margin-top: 0.95em;
+}
+
+#content .settingdetail .item .itemright .ui.toggle.checkbox{
+	margin-top: 1.3em;
+}
+
+#content .settingdetail .item .itemright .ui.form .field{
+	margin: 0;
+	margin-right: 2em;
+	display: inline-block;
+}
+
+#content .settingdetail .item .itemright .ui.button{
+	margin-top: 0.95em;
+	padding:0.55em 1.5em;
+}
+
+#content .settingdetail .item .button.transparent{
+	background: transparent;	
+}
+
+#content .settingdetail .item .ip_input{
+	border-radius: 0.28571429rem;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+}
+#content .settingdetail .item .ip_input input{
+	width: 4em;
+	border: none;
+}
+
+#content .settingdetail .item .ip_input span{
+	height: 2.1em;
+	line-height: 2.1em;
+}
+
+#content .settingdetail .item .ui.dropdown{
+	width: 200px;
+	height: 2.1em;
+	min-height: 2.1em;
+	margin-top: 0.95em;
+	line-height: 2.1em;
+}
+
+#content .settingdetail .item .ui.dropdown div.text{
+	top:0;
+	left: 0;
+	padding:0 1em;
+	position: absolute;
+}
+
+#content .settingdetail .item .ui.dropdown .menu .item{
+	line-height: 1em;
+	padding: 0.5em 1em;
+}
+
+#content .settingdetail .item .uninput input{
+	margin-top: 1em;
+}
+
+#content .settingdetail .item .uninput input.smallinput{
+	width:4.5em;
+	text-align: center;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+}
+
+#content .settingdetail .item .ui.pointing.label{
+	font-weight: normal;
+	vertical-align: middle;
+}
+
+#content .settingdetail .item input.miniinput{
+	width:3.2em;
+	text-align: center;
+	padding-left: 0.7em;
+	padding-right: 0.7em;
+}
+
+#content .settingdetail .item .textinput{
+	line-height: 2.1em;
+}
+
+#content .settingdetail .item .itemlabel{
+	float: left;
+	margin-top: 1em;
+	line-height: 2.1em;
+}
+
+#content .settingdetail .item .droplabel{
+	margin-top: 1.25em;
+}
+
+
+/* ---------------------------------显示页面---------------------------- */
+#content .horizontal.list{
+	display: flex;
+}
+
+#content .horizontal.list>.item{
+	flex: 1;
+	text-align: center;
+}
+
+#content .showdetail .item{
+	height: 2em;
+	line-height: 2em;
+}
+
+#content .showdetail .item div:first-child{
+	width: 50%;
+	float: left;
+	text-align: left;
+	padding-left: 15%;
+}
+
+#content .showdetail .item  .itemright{
+	width: 50%;
+	float: left;
+	text-align: left;
+}
+
+/* ---------------------------------checkbox-toggle---------------------------- */
+#content .toggle_input .toggle_box{
+	width: 3.5em;
+	height:1.5em;
+	background: #eee;
+	position: relative;
+	margin-top: 1.25em;
+	margin-right: 0.5em;
+	border-radius: 0.75em;
+	display: inline-block;
+}
+
+#content .toggle_input .toggle_box input{
+	cursor: pointer;
+}
+
+#content .toggle_input .toggle_box .toggle_span{
+	top: 0;
+	left: 0;
+	width: 1.5em;
+	height: 1.5em;
+	background: #fff;
+	position: absolute;
+	border-radius: 0.75em;
+	border:1px solid #ddd;
+	box-shadow: 1px 1px 3px #ddd;
+}
+
+#content .toggle_input .toggle_box.cur{
+	background: rgb(0,200,224);
+}
+
+#content .toggle_input .toggle_box input{
+	width: inherit;
+	height: inherit;
+}
+
+/* ---------------------------------radio---------------------------- */
+#content .radio_input .radio_box{
+	width: 1.5em;
+	height:1.5em;
+	background: #fff;
+	position: relative;
+	margin-top: 1.25em;
+	margin-right: 0.5em;
+	border-radius: 30%;
+	display: inline-block;
+	border:1px solid rgb(0,200,224);
+}
+
+#content .radio_input .radio_box input{
+	cursor: pointer;
+}
+
+#content .radio_input .radio_box .radio_span{
+	top: 50%;
+	left: 50%;
+	width: 0.75em;
+	height: 0.75em;
+	background: #fff;
+	position: absolute;
+	border-radius: 30%;
+	margin-top: -0.35em;
+	margin-left: -0.35em;
+}
+
+#content .radio_input .radio_box.cur .radio_span{
+	background: rgb(0,200,224);
+}
+
+#content .radio_input .radio_box input{
+	width: inherit;
+	height: inherit;
+}
+
+#content .radio_input{
+	cursor: pointer;
+}
+
+#content .radio_input label{
+	cursor: pointer;
+}
+/* ---------------------------------common---------------------------- */
+#content #kind1_t #datashow{
+	padding:0 10px 10px;
+	overflow: hidden;
+}
+
+#content #kind1_t #datashow .ui.label{
+	font-size: 1rem;
+	margin-left: 10px;
+}
+
+#content #kind1_t #datashow .ui.label i{
+	margin-right: 0;
+}
+
+#content #kind1_b{
+	padding:0 10px;
+}
+
+#content #kind1_b .kind1img{
+	width: 57px;
+	height:57px;
+	display: inline-block;
+	background-position-x:0px;
+	background-repeat:no-repeat;
+	background-image:url(nav.png);
+}
+
+#content #kind1_b .kind1img.switchon{
+	background-position-x:-57px;
+}
+
+#content #kind1_b .kind1img.navimg1{
+	background-position-y:0px;
+}
+
+#content #kind1_b .kind1img.navimg2{
+	background-position-y:-57px;
+}
+
+#content #kind1_b .kind1img.navimg3{
+	background-position-y:-114px;
+}
+
+#content #kind1_b .kind1img.navimg4{
+	background-position-y:-171px;
+}
+
+#content #kind1_b .kind1img.navimg5{
+	background-position-y:-228px;
+}
+
+#content #kind1_b .kind1img.navimg6{
+	background-position-y:-285px;
+}
+
+#content #kind1_b .kind1img.navimg7{
+	background-position-y:-342px;
+}
+
+#content #kind1_b .kind1img.navimg8{
+	background-position-y:-399px;
+}
+
+#content #kind8_t .itemfreshbtn{
+	margin-left: 1em;
+}
+
+/* ---------------------------------footer---------------------------- */
+#footer{
+	height:120px;
+	margin-top:20px;
+	line-height:120px;
+	text-align: center;
+	color:rgb(114, 114, 114);
+    background: rgb(41, 40, 42);
+}

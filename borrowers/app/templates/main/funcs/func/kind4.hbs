@@ -1,0 +1,53 @@
+<div id="kind4_t" class="ui list">
+
+	{{#each model.deviceinfo as |device|}}
+		<div class="item clearfix devicedetail">
+
+			<div class="fl">
+				{{#if device.kindiscomputer}}
+					<i class="icon desktop myblue"></i>
+				{{else if device.kindismobile}}
+					<i class="icon mobile myblue"></i>
+				{{else if device.kindisknow}}
+					<i class="icon help circle myblue"></i>
+				{{/if}}
+			</div>
+
+			<div class="fl">
+				<div class="ui list">
+					<div class="item clearfix">
+						{{item-icon-edit defaultvalue=device.devicename label="设备名称"}}
+					</div>
+					<div class="item">
+						<label>MAC地址</label>：
+						<label>{{device.MAC}}</label>
+					</div>
+					<div class="item">
+						<label>IP地址</label>：
+						<label>{{device.IP}}</label>
+					</div>
+					<div class="item">
+						{{item-icon-wifi defaultvalue=device.usedcapacity label="连接方式" wifitype=device.wifitype}}
+					</div>
+				</div>
+			</div>
+
+			<div class="fr">
+				<div class="ui button bgblue">家长设置</div>
+				<div class="ui button bgblue">加入黑名单</div>
+			</div>
+
+		</div>
+	{{/each}}
+</div>
+
+<script>
+  
+  $(function(){
+  
+    var main_height=$("#main").outerHeight();
+    $("#nav").css("height",main_height);
+  
+  })
+
+</script>

@@ -1,0 +1,218 @@
+<div id="kind8_t">
+	<div class="ui list clearfix settingdetail">
+
+		<div class="item">
+			<div>连接方式：</div>
+			<div class="itemright">
+				<div class="ui form">
+					<div class="grouped fields">
+						<div class="field" connectiontype="1">
+							{{input-radio label="DHCP" name="connectiontype" isdefault=true setAction=(action "radio_selected")}}
+						</div>
+						<div class="field" connectiontype="2">
+							{{input-radio label="拨号上网" name="connectiontype" setAction=(action "radio_selected")}}
+						</div>
+						<div class="field" connectiontype="3">
+							{{input-radio label="静态ip地址" name="connectiontype" setAction=(action "radio_selected")}}
+						</div>
+						<div class="field" connectiontype="4">
+							{{input-radio label="无线中继" name="connectiontype" setAction=(action "radio_selected")}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{{#if isDHCP}}
+
+			<div class="item">
+				<div>IP地址：</div>
+				<div class="itemright">{{device.devicename}}</div>
+			</div>
+
+			<div class="item">
+				<div>子网掩码：</div>
+				<div class="itemright">{{device.totalcapacity}}</div>
+			</div>
+
+			<div class="item">
+				<div>路由器网关：</div>
+				<div class="itemright">{{device.usedcapacity}}</div>
+			</div>
+
+			<div class="item">
+				<div>MTU最大传输单元：</div>
+				<form class="itemright">
+					<div class="field uninput">
+						<input type="text" class="fl smallinput" placeholder="1500">
+						<div class="ui left pointing basic label">
+					    	默认值是1500，如无必要请勿改动
+					    </div>
+					</div>
+				</form>
+			</div>
+
+			<div class="centerbtn">
+				<div class="ui button bgblue">
+					保存设置
+				</div>
+			</div>
+
+		{{/if}}
+
+		{{#if isPPPOE}}
+
+			<div class="item">
+				<div>帐号：</div>
+				<div class="itemright">
+					<div class="ui input">
+						<input type="text" placeholder="您的上网帐号">
+					</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<div>密码：</div>
+				<div class="itemright passwordinput">
+					{{input-password}}
+				</div>
+			</div>
+			
+			<div class="item">
+				<div>连接模式：</div>
+				<div class="itemright">
+					{{#ui-dropdown class="selection" onChange=(action 'update_selected')}}
+						<div class="default text">请选择...</div>
+						<i class="dropdown icon"></i>
+						<div class="menu">
+							{{#each itemActions_2 as |actionname|}}
+								<div class="item" data-id="{{actionname}}">
+									{{actionname}}
+								</div>
+							{{/each}}
+						</div>
+					{{/ui-dropdown}}
+					<div class="">
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<div>MTU协商：</div>
+				<div class="itemright">
+					{{input-toggle}}
+				</div>
+			</div>
+
+			<div class="centerbtn">
+				<div class="ui button bgblue">
+					保存设置
+				</div>
+			</div>
+
+		{{/if}}
+
+		{{#if isstaticIP}}
+
+			<div class="item">
+				<div>IP地址：</div>
+				<div class="itemright">
+					{{input-ip isneedbtn=true isread=false}}
+				</div>
+			</div>
+
+			<div class="item">
+				<div>子网掩码：</div>
+				<div class="itemright">
+					{{input-ip isneedbtn=true isread=false}}
+				</div>
+			</div>
+
+			<div class="item">
+				<div>路由器网关：</div>
+				<div class="itemright">
+					{{input-ip isneedbtn=true isread=false}}
+				</div>
+			</div>
+
+			<div class="item">
+				<div>DNS1：</div>
+				<div class="itemright">
+					{{input-ip isneedbtn=true isread=false}}
+				</div>
+			</div>
+
+			<div class="item">
+				<div>DNS2：</div>
+				<div class="itemright">
+					{{input-ip isneedbtn=true isread=false}}
+				</div>
+			</div>
+
+			<div class="item">
+				<div>MTU最大传输单元：</div>
+				<form class="itemright">
+					<div class="field uninput">
+						<input type="text" class="smallinput fl" placeholder="1500">
+						<div class="ui left pointing basic label">
+					    	默认值是1500，如无必要请勿改动
+					    </div>
+					</div>
+				</form>
+			</div>
+
+			<div class="centerbtn">
+				<div class="ui button bgblue">
+					保存设置
+				</div>
+			</div>
+
+		{{/if}}
+
+
+		{{#if isrepeater}}
+
+			<div class="item">
+				<div>状态：</div>
+				<div class="itemright">
+					{{input-toggle}}
+				</div>
+			</div>
+
+			<div class="item">
+				<div>WI-FI：</div>
+				<div class="itemright">
+					{{#ui-dropdown class="selection" onChange=(action 'update_selected')}}
+						<div class="default text">桥接模式已关闭</div>
+						<i class="dropdown icon"></i>
+						<div class="menu">
+							{{#each itemActions_4 as |actionname|}}
+								<div class="item" data-id="{{actionname}}">
+									{{actionname}}
+								</div>
+							{{/each}}
+						</div>
+					{{/ui-dropdown}}
+					<div class="ui button bgblue itemfreshbtn">
+						刷新
+					</div>
+				</div>
+			</div>
+
+		{{/if}}
+		
+	</div>
+
+</div>
+
+<script>
+  
+  $(function(){
+  
+    var main_height=$("#main").outerHeight();
+    $("#nav").css("height",main_height);
+  
+  })
+
+</script>
