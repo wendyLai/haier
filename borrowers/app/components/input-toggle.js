@@ -8,16 +8,16 @@ export default Ember.Component.extend({
 			var this_html=Ember.$("#"+this_id+"").find("label").html();
 			//console.log( this_html );
 			
-			if( this_html=="off" ){
+			if( this_html==="off" ){
 				Ember.$("#"+this_id+"").find("label").html("on");
 				Ember.$("#"+this_id+"").find("input").attr("checked",true);
 				Ember.$("#"+this_id+"").find(".toggle_box").addClass("cur");
-				Ember.$("#"+this_id+"").find(".toggle_span").stop().animate({"left":"2em"}, 300)
-			}else if( this_html=="on" ){
+				Ember.$("#"+this_id+"").find(".toggle_span").stop().animate({"left":"2em"}, 300);
+			}else if( this_html==="on" ){
 				Ember.$("#"+this_id+"").find("label").html("off");
 				Ember.$("#"+this_id+"").find("input").removeAttr("checked");
 				Ember.$("#"+this_id+"").find(".toggle_box").removeClass("cur");
-				Ember.$("#"+this_id+"").find(".toggle_span").stop().animate({"left":"0em"}, 300)
+				Ember.$("#"+this_id+"").find(".toggle_span").stop().animate({"left":"0em"}, 300);
 			}
 		}
 	}

@@ -13,7 +13,7 @@ define('borrowers/tests/components/input-ip.jshint', ['exports'], function (expo
   QUnit.module('JSHint - components');
   QUnit.test('components/input-ip.js should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/input-ip.js should pass jshint.\ncomponents/input-ip.js: line 26, col 61, Expected \'===\' and instead saw \'==\'.\ncomponents/input-ip.js: line 7, col 37, \'e\' is not defined.\ncomponents/input-ip.js: line 36, col 13, \'$\' is not defined.\n\n3 errors');
+    assert.ok(true, 'components/input-ip.js should pass jshint.');
   });
 });
 define('borrowers/tests/components/input-password.jshint', ['exports'], function (exports) {
@@ -22,7 +22,7 @@ define('borrowers/tests/components/input-password.jshint', ['exports'], function
   QUnit.module('JSHint - components');
   QUnit.test('components/input-password.js should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/input-password.js should pass jshint.\ncomponents/input-password.js: line 9, col 28, Expected \'===\' and instead saw \'==\'.\ncomponents/input-password.js: line 11, col 34, Expected \'===\' and instead saw \'==\'.\n\n2 errors');
+    assert.ok(true, 'components/input-password.js should pass jshint.');
   });
 });
 define('borrowers/tests/components/input-radio.jshint', ['exports'], function (exports) {
@@ -31,7 +31,7 @@ define('borrowers/tests/components/input-radio.jshint', ['exports'], function (e
   QUnit.module('JSHint - components');
   QUnit.test('components/input-radio.js should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/input-radio.js should pass jshint.\ncomponents/input-radio.js: line 10, col 17, \'this_checked\' is defined but never used.\n\n1 error');
+    assert.ok(true, 'components/input-radio.js should pass jshint.');
   });
 });
 define('borrowers/tests/components/input-toggle.jshint', ['exports'], function (exports) {
@@ -40,7 +40,7 @@ define('borrowers/tests/components/input-toggle.jshint', ['exports'], function (
   QUnit.module('JSHint - components');
   QUnit.test('components/input-toggle.js should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/input-toggle.js should pass jshint.\ncomponents/input-toggle.js: line 11, col 28, Expected \'===\' and instead saw \'==\'.\ncomponents/input-toggle.js: line 15, col 97, Missing semicolon.\ncomponents/input-toggle.js: line 16, col 34, Expected \'===\' and instead saw \'==\'.\ncomponents/input-toggle.js: line 20, col 97, Missing semicolon.\n\n4 errors');
+    assert.ok(true, 'components/input-toggle.js should pass jshint.');
   });
 });
 define('borrowers/tests/components/item-icon-edit.jshint', ['exports'], function (exports) {
@@ -94,7 +94,7 @@ define('borrowers/tests/controllers/main/funcs/func/kind11.jshint', ['exports'],
   QUnit.module('JSHint - controllers/main/funcs/func');
   QUnit.test('controllers/main/funcs/func/kind11.js should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/main/funcs/func/kind11.js should pass jshint.\ncontrollers/main/funcs/func/kind11.js: line 15, col 32, Expected \'===\' and instead saw \'==\'.\ncontrollers/main/funcs/func/kind11.js: line 27, col 50, \'value\' is defined but never used.\n\n2 errors');
+    assert.ok(true, 'controllers/main/funcs/func/kind11.js should pass jshint.');
   });
 });
 define('borrowers/tests/controllers/main/funcs/func/kind8.jshint', ['exports'], function (exports) {
@@ -103,7 +103,7 @@ define('borrowers/tests/controllers/main/funcs/func/kind8.jshint', ['exports'], 
   QUnit.module('JSHint - controllers/main/funcs/func');
   QUnit.test('controllers/main/funcs/func/kind8.js should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/main/funcs/func/kind8.js should pass jshint.\ncontrollers/main/funcs/func/kind8.js: line 9, col 11, Duplicate key \'isDHCP\'.\ncontrollers/main/funcs/func/kind8.js: line 10, col 41, Expected \'===\' and instead saw \'==\'.\ncontrollers/main/funcs/func/kind8.js: line 14, col 12, Duplicate key \'isPPPOE\'.\ncontrollers/main/funcs/func/kind8.js: line 15, col 41, Expected \'===\' and instead saw \'==\'.\ncontrollers/main/funcs/func/kind8.js: line 19, col 15, Duplicate key \'isstaticIP\'.\ncontrollers/main/funcs/func/kind8.js: line 20, col 41, Expected \'===\' and instead saw \'==\'.\ncontrollers/main/funcs/func/kind8.js: line 24, col 15, Duplicate key \'isrepeater\'.\ncontrollers/main/funcs/func/kind8.js: line 25, col 41, Expected \'===\' and instead saw \'==\'.\ncontrollers/main/funcs/func/kind8.js: line 47, col 32, Expected \'===\' and instead saw \'==\'.\ncontrollers/main/funcs/func/kind8.js: line 49, col 38, Expected \'===\' and instead saw \'==\'.\ncontrollers/main/funcs/func/kind8.js: line 48, col 21, \'$\' is not defined.\ncontrollers/main/funcs/func/kind8.js: line 50, col 21, \'$\' is not defined.\ncontrollers/main/funcs/func/kind8.js: line 36, col 50, \'value\' is defined but never used.\n\n13 errors');
+    assert.ok(true, 'controllers/main/funcs/func/kind8.js should pass jshint.');
   });
 });
 define('borrowers/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {

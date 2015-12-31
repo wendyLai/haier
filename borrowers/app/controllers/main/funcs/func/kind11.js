@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
 	changeitem:function(params){
 		var this_value=params.value;
 		var next=params.tabIndex;
-		if (this_value.length==params.maxLength)
+		if (this_value.length===params.maxLength)
 		{
 			/*console.log("--------达到最大字符----------");*/
 			if (next<params.length)
@@ -24,7 +24,7 @@ export default Ember.Controller.extend({
 		}
 	},
 	actions: {
-		update_selected: function(component, id, value) {
+		update_selected: function(component, id) {
 			this.set('selectedAction', id);
 		}
 	}

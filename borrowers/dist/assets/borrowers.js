@@ -34,7 +34,7 @@ define('borrowers/components/input-ip', ['exports', 'ember'], function (exports,
 		isread: true,
 		actions: {
 			valid_value: function valid_value(event) {
-				var eventObj = event || e;
+				var eventObj = event;
 				var keyCode = eventObj.keyCode || eventObj.which;
 				if (keyCode >= 48 && keyCode <= 57) {
 					return true;
@@ -52,7 +52,7 @@ define('borrowers/components/input-ip', ['exports', 'ember'], function (exports,
 				var this_input_arr = _ember['default'].$("#" + this_id + " input");
 				//console.log(this_input_arr);
 
-				if (this_input_arr.eq(this_index).val().length == 3) {
+				if (this_input_arr.eq(this_index).val().length === 3) {
 					//console.log(this_index,"--------应该跳转了----------");
 					_ember['default'].$("#" + this_id + " input").eq(this_index + 1).focus();
 					_ember['default'].$("#" + this_id + " input").eq(this_index + 1).select();
@@ -61,7 +61,7 @@ define('borrowers/components/input-ip', ['exports', 'ember'], function (exports,
 			clear_ip: function clear_ip() {
 				var this_id = this.get('elementId');
 				//console.log( this_id );
-				$("#" + this_id + " .ip_input input").val("");
+				_ember['default'].$("#" + this_id + " .ip_input input").val("");
 			}
 
 		}
@@ -74,9 +74,9 @@ define('borrowers/components/input-password', ['exports', 'ember'], function (ex
 				var this_id = this.get('elementId');
 				var this_type = _ember['default'].$("#" + this_id + " input").attr("type");
 				//console.log(this_id);
-				if (this_type == "text") {
+				if (this_type === "text") {
 					_ember['default'].$("#" + this_id + " input").attr("type", "password");
-				} else if (this_type == "password") {
+				} else if (this_type === "password") {
 					_ember['default'].$("#" + this_id + " input").attr("type", "text");
 				}
 			}
@@ -91,7 +91,7 @@ define('borrowers/components/input-radio', ['exports', 'ember'], function (expor
 				//console.log( this_id );
 				var this_name = this.get('name');
 				//console.log( this_name );
-				var this_checked = _ember['default'].$("#" + this_id + "").find("input").attr("checked");
+				//var this_checked=Ember.$("#"+this_id+"").find("input").attr("checked");
 				//console.log( this_checked );
 
 				_ember['default'].$("input[name=" + this_name + "]").removeAttr("checked");
@@ -114,12 +114,12 @@ define('borrowers/components/input-toggle', ['exports', 'ember'], function (expo
 				var this_html = _ember['default'].$("#" + this_id + "").find("label").html();
 				//console.log( this_html );
 
-				if (this_html == "off") {
+				if (this_html === "off") {
 					_ember['default'].$("#" + this_id + "").find("label").html("on");
 					_ember['default'].$("#" + this_id + "").find("input").attr("checked", true);
 					_ember['default'].$("#" + this_id + "").find(".toggle_box").addClass("cur");
 					_ember['default'].$("#" + this_id + "").find(".toggle_span").stop().animate({ "left": "2em" }, 300);
-				} else if (this_html == "on") {
+				} else if (this_html === "on") {
 					_ember['default'].$("#" + this_id + "").find("label").html("off");
 					_ember['default'].$("#" + this_id + "").find("input").removeAttr("checked");
 					_ember['default'].$("#" + this_id + "").find(".toggle_box").removeClass("cur");
@@ -329,7 +329,7 @@ define("borrowers/controllers/main/funcs/func/kind11", ["exports", "ember"], fun
 		changeitem: function changeitem(params) {
 			var this_value = params.value;
 			var next = params.tabIndex;
-			if (this_value.length == params.maxLength) {
+			if (this_value.length === params.maxLength) {
 				/*console.log("--------达到最大字符----------");*/
 				if (next < params.length) {
 					/*console.log("--------应该跳转了----------");*/
@@ -339,7 +339,7 @@ define("borrowers/controllers/main/funcs/func/kind11", ["exports", "ember"], fun
 			}
 		},
 		actions: {
-			update_selected: function update_selected(component, id, value) {
+			update_selected: function update_selected(component, id) {
 				this.set('selectedAction', id);
 			}
 		}
@@ -347,28 +347,24 @@ define("borrowers/controllers/main/funcs/func/kind11", ["exports", "ember"], fun
 });
 define('borrowers/controllers/main/funcs/func/kind8', ['exports', 'ember'], function (exports, _ember) {
 	exports['default'] = _ember['default'].Controller.extend({
-		isDHCP: false,
-		isPPPOE: false,
-		isstaticIP: false,
-		isrepeater: false,
 		connectiontype: 1, //设置一个默认值
 		isDHCP: _ember['default'].computed('connectiontype', function () {
-			if (this.get('connectiontype') == 1) {
+			if (this.get('connectiontype') === 1) {
 				return true;
 			}
 		}),
 		isPPPOE: _ember['default'].computed('connectiontype', function () {
-			if (this.get('connectiontype') == 2) {
+			if (this.get('connectiontype') === 2) {
 				return true;
 			}
 		}),
 		isstaticIP: _ember['default'].computed('connectiontype', function () {
-			if (this.get('connectiontype') == 3) {
+			if (this.get('connectiontype') === 3) {
 				return true;
 			}
 		}),
 		isrepeater: _ember['default'].computed('connectiontype', function () {
-			if (this.get('connectiontype') == 4) {
+			if (this.get('connectiontype') === 4) {
 				return true;
 			}
 		}),
@@ -379,7 +375,7 @@ define('borrowers/controllers/main/funcs/func/kind8', ['exports', 'ember'], func
 		selectedAction: null,
 
 		actions: {
-			update_selected: function update_selected(component, id, value) {
+			update_selected: function update_selected(component, id) {
 				this.set('selectedAction', id);
 			},
 			radio_selected: function radio_selected() {
@@ -390,10 +386,10 @@ define('borrowers/controllers/main/funcs/func/kind8', ['exports', 'ember'], func
 			toggle_password: function toggle_password() {
 				var this_type = _ember['default'].$(".passwordinput.password_1 input").attr("type");
 				//console.log(this_type);
-				if (this_type == "text") {
-					$(".passwordinput.password_1 input").attr("type", "password");
-				} else if (this_type == "password") {
-					$(".passwordinput.password_1 input").attr("type", "text");
+				if (this_type === "text") {
+					_ember['default'].$(".passwordinput.password_1 input").attr("type", "password");
+				} else if (this_type === "password") {
+					_ember['default'].$(".passwordinput.password_1 input").attr("type", "text");
 				}
 			}
 		}
@@ -10427,7 +10423,7 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("borrowers/app")["default"].create({"name":"borrowers","version":"0.0.0+7dcffc68"});
+  require("borrowers/app")["default"].create({"name":"borrowers","version":"0.0.0+4d3b29ba"});
 }
 
 /* jshint ignore:end */
