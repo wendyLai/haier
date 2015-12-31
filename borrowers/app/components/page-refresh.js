@@ -3,7 +3,7 @@ import Ember from "ember";
 export default Ember.Component.extend({
 	tagName: "li",
 	actions: {
-		doRefresh: function () {
+		do_refresh: function () {
 			window.location.reload();//刷新当前页面
 			//parent.location.reload();//刷新父亲对象（用于框架） 
 			//opener.location.reload();//刷新父窗口对象（用于单开窗口） 

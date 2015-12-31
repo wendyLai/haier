@@ -91,8 +91,6 @@ define('borrowers/components/input-radio', ['exports', 'ember'], function (expor
 				//console.log( this_id );
 				var this_name = this.get('name');
 				//console.log( this_name );
-				//var this_checked=Ember.$("#"+this_id+"").find("input").attr("checked");
-				//console.log( this_checked );
 
 				_ember['default'].$("input[name=" + this_name + "]").removeAttr("checked");
 				_ember['default'].$("input[name=" + this_name + "]").parent().removeClass("cur");
@@ -220,7 +218,7 @@ define("borrowers/components/page-refresh", ["exports", "ember"], function (expo
 	exports["default"] = _ember["default"].Component.extend({
 		tagName: "li",
 		actions: {
-			doRefresh: function doRefresh() {
+			do_refresh: function do_refresh() {
 				window.location.reload(); //刷新当前页面
 				//parent.location.reload();//刷新父亲对象（用于框架）
 				//opener.location.reload();//刷新父窗口对象（用于单开窗口）
@@ -233,7 +231,7 @@ define("borrowers/components/page-toggle", ["exports", "ember"], function (expor
 	exports["default"] = _ember["default"].Component.extend({
 		tagName: "li",
 		actions: {
-			listToggle: function listToggle() {
+			list_toggle: function list_toggle() {
 				var this_id = this.get('elementId');
 				console.log(this_id);
 
@@ -349,22 +347,22 @@ define('borrowers/controllers/main/funcs/func/kind8', ['exports', 'ember'], func
 	exports['default'] = _ember['default'].Controller.extend({
 		connectiontype: 1, //设置一个默认值
 		isDHCP: _ember['default'].computed('connectiontype', function () {
-			if (this.get('connectiontype') === 1) {
+			if (this.get('connectiontype') == 1) {
 				return true;
 			}
 		}),
 		isPPPOE: _ember['default'].computed('connectiontype', function () {
-			if (this.get('connectiontype') === 2) {
+			if (this.get('connectiontype') == 2) {
 				return true;
 			}
 		}),
 		isstaticIP: _ember['default'].computed('connectiontype', function () {
-			if (this.get('connectiontype') === 3) {
+			if (this.get('connectiontype') == 3) {
 				return true;
 			}
 		}),
 		isrepeater: _ember['default'].computed('connectiontype', function () {
-			if (this.get('connectiontype') === 4) {
+			if (this.get('connectiontype') == 4) {
 				return true;
 			}
 		}),
@@ -386,9 +384,9 @@ define('borrowers/controllers/main/funcs/func/kind8', ['exports', 'ember'], func
 			toggle_password: function toggle_password() {
 				var this_type = _ember['default'].$(".passwordinput.password_1 input").attr("type");
 				//console.log(this_type);
-				if (this_type === "text") {
+				if (this_type == "text") {
 					_ember['default'].$(".passwordinput.password_1 input").attr("type", "password");
-				} else if (this_type === "password") {
+				} else if (this_type == "password") {
 					_ember['default'].$(".passwordinput.password_1 input").attr("type", "text");
 				}
 			}
@@ -2041,7 +2039,7 @@ define("borrowers/templates/components/page-refresh", ["exports"], function (exp
           },
           "end": {
             "line": 1,
-            "column": 51
+            "column": 52
           }
         },
         "moduleName": "borrowers/templates/components/page-refresh.hbs"
@@ -2062,7 +2060,7 @@ define("borrowers/templates/components/page-refresh", ["exports"], function (exp
         morphs[0] = dom.createElementMorph(element0);
         return morphs;
       },
-      statements: [["element", "action", ["doRefresh"], [], ["loc", [null, [1, 24], [1, 46]]]]],
+      statements: [["element", "action", ["do_refresh"], [], ["loc", [null, [1, 24], [1, 47]]]]],
       locals: [],
       templates: []
     };
@@ -2081,7 +2079,7 @@ define("borrowers/templates/components/page-toggle", ["exports"], function (expo
           },
           "end": {
             "line": 1,
-            "column": 57
+            "column": 58
           }
         },
         "moduleName": "borrowers/templates/components/page-toggle.hbs"
@@ -2102,7 +2100,7 @@ define("borrowers/templates/components/page-toggle", ["exports"], function (expo
         morphs[0] = dom.createElementMorph(element0);
         return morphs;
       },
-      statements: [["element", "action", ["listToggle"], [], ["loc", [null, [1, 29], [1, 52]]]]],
+      statements: [["element", "action", ["list_toggle"], [], ["loc", [null, [1, 29], [1, 53]]]]],
       locals: [],
       templates: []
     };

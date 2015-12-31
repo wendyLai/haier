@@ -3,7 +3,7 @@ import Ember from "ember";
 export default Ember.Component.extend({
 	tagName: "li",
 	actions: {
-		listToggle:function (){
+		list_toggle:function (){
 			var this_id=this.get('elementId');
 			console.log( this_id );
 

@@ -103,7 +103,7 @@ define('borrowers/tests/controllers/main/funcs/func/kind8.jshint', ['exports'], 
   QUnit.module('JSHint - controllers/main/funcs/func');
   QUnit.test('controllers/main/funcs/func/kind8.js should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'controllers/main/funcs/func/kind8.js should pass jshint.');
+    assert.ok(false, 'controllers/main/funcs/func/kind8.js should pass jshint.\ncontrollers/main/funcs/func/kind8.js: line 6, col 41, Expected \'===\' and instead saw \'==\'.\ncontrollers/main/funcs/func/kind8.js: line 11, col 41, Expected \'===\' and instead saw \'==\'.\ncontrollers/main/funcs/func/kind8.js: line 16, col 41, Expected \'===\' and instead saw \'==\'.\ncontrollers/main/funcs/func/kind8.js: line 21, col 41, Expected \'===\' and instead saw \'==\'.\ncontrollers/main/funcs/func/kind8.js: line 43, col 32, Expected \'===\' and instead saw \'==\'.\ncontrollers/main/funcs/func/kind8.js: line 45, col 38, Expected \'===\' and instead saw \'==\'.\n\n6 errors');
   });
 });
 define('borrowers/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
