@@ -1,0 +1,1 @@
+/home/lwr/haier/borrowers/tmp/funnel-input_base_path-rq7YevlV.tmp/0/bower_components/ember-cli-test-loader/test-loader.js

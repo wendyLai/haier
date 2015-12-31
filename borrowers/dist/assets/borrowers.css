@@ -198,6 +198,10 @@ i.help.circle{
 	text-align: center;
 }
 
+#loginbox .passwordinput .button{
+	margin-left: -3em;
+}
+
 #loginfooter{
 	left:50%;
 	color:#fff;
